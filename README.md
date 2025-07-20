@@ -52,3 +52,120 @@ AlgoVision is a web-based coding assistant that:
 ```bash
 git clone https://github.com/yourusername/AlgoVision.git
 cd AlgoVision
+
+Installation
+Install dependencies:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Set environment variables in a .env file:
+
+ini
+Copy
+Edit
+GEMINI_API_KEY=your_gemini_key_here
+GEMINI_MODEL=gemini-2.5-flash-preview
+MONGODB_URI=mongodb://localhost:27017/algovision
+Add algorithm templates in the algorithms/ directory.
+Example JSON format:
+
+json
+Copy
+Edit
+{
+  "name": "Dijkstra's Algorithm",
+  "category": "Graph",
+  "code": "def dijkstra(...): ...",
+  "time_complexity": "O(E log V)"
+}
+Start the application:
+
+bash
+Copy
+Edit
+uvicorn app.main:app --reload
+The app will be available at http://localhost:8000/
+
+Usage
+Open http://localhost:8000/ in your browser.
+
+Enter a problem description, for example:
+"Find the shortest path in an unweighted graph."
+
+The app will:
+
+Classify the problem (for example, Graph)
+
+Provide the most suitable algorithm template
+
+Display complexity and explanation
+
+API Endpoints
+Endpoint	Method	Description
+/classify	GET	Classifies input and returns algorithm type
+/snippet/{category}	GET	Returns code template for a given category
+/stats	GET	Shows usage analytics and accuracy metrics
+
+Running Tests
+Run all tests with pytest:
+
+bash
+Copy
+Edit
+pytest tests/
+Deployment on Google Cloud Run
+Build Docker image:
+
+bash
+Copy
+Edit
+docker build -t algovision .
+Push to Google Container Registry:
+
+bash
+Copy
+Edit
+docker tag algovision gcr.io/$GCP_PROJECT/algovision
+docker push gcr.io/$GCP_PROJECT/algovision
+Deploy:
+
+bash
+Copy
+Edit
+gcloud run deploy algovision \
+  --image gcr.io/$GCP_PROJECT/algovision \
+  --platform managed \
+  --region YOUR_REGION \
+  --allow-unauthenticated
+Contributing
+Fork this repository
+
+Create a feature branch:
+
+bash
+Copy
+Edit
+git checkout -b feature/my-feature
+Commit your changes:
+
+bash
+Copy
+Edit
+git commit -m "Add new feature"
+Push to your branch and open a pull request.
+
+Roadmap
+Add additional algorithms (Backtracking, Heap, etc.)
+
+Build a React-based frontend with live code execution
+
+Support for multi-language snippets (Java, C++, Go)
+
+Enhance analytics dashboard with real-time charts
+
+Add CI/CD pipelines for testing and deployment
+
+License
+This project is licensed under the MIT License.
