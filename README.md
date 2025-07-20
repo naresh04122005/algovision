@@ -1,10 +1,10 @@
-# 🌟 AlgoVision – AI‑Powered Coding Assistant
+# AlgoVision – AI‑Powered Coding Assistant
 
 **A full-stack project that combines Gemini API with algorithmic expertise to help developers solve DSA challenges.**
 
 ---
 
-## 🧠 Overview
+## Overview
 
 AlgoVision is a web-based coding assistant that:
 - Classifies problem statements (e.g., “graph shortest path,” “knapsack DP”) using the **Gemini API**
@@ -14,26 +14,26 @@ AlgoVision is a web-based coding assistant that:
 
 ---
 
-## ⚙️ Features
+## Features
 
-- **📚 Problem Classification**  
+- **Problem Classification**  
   Uses Gemini to determine problem type with ~92% accuracy
 
-- **🔧 Algorithm Template Library**  
+- **Algorithm Template Library**  
   Contains 15+ ready-to-use algorithm snippets in Python
 
-- **🌐 Web Interface**  
+- **Web Interface**  
   Built with FastAPI (backend) and optional React frontend
 
-- **📊 Analytics Tracking**  
+- **Analytics Tracking**  
   Logs classification accuracy and usage stats
 
-- **☁️ Scalable Deployment**  
+- **Scalable Deployment**  
   Hosted on Google Cloud Run for 100+ concurrent users
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer         | Technologies                                                                 |
 |---------------|------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ AlgoVision is a web-based coding assistant that:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repo
 
